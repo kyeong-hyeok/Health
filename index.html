@@ -9,7 +9,29 @@
       text-decoration: none;
     }
     h1 {
-      font-size: 45px; text-align: center
+      font-size: 45px; text-align: center;
+      border-bottom:1px solid gray;
+      margin:0;
+      padding:20px;
+    }
+    ol {
+      border-right: 1px solid gray;
+      padding:15px;
+      margin:0;
+      width:100px;
+    }
+    body {
+      margin:0;
+    }
+    #grid ol {
+      padding-left:33px;
+    }
+    #grid {
+      display:grid;
+      grid-template-columns: 150px 1fr;
+    }
+    #grid #article {
+      padding:20px;
     }
   </style>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -23,23 +45,19 @@
 </script>
 </head>
 <body>
-  <h1><a href="index.html">Health</a></h1>
-  <ol>
-    <li><a href="1.html">Chest</a></li>
-    <li><a href="2.html">Back</a></li>
-    <li><a href="3.html">Shoulder</a></li>
-  </ol>
-  <!--
-  <h1><a href="index.html">Health</a></h1>
-  <ol>
-    <li><a href="1.html">Chest</a></li>
-    <li><a href="2.html">Back</a></li>
-    <li><a href="3.html">Shoulder</a></li>
-  </ol>
-  -->
-  <h2>Health Training</h2>
-  Movement is the most natural activity to keep body in its best efficiency or to regain the best conditions of functionality of the muscular and cardiovascular system after a period of inactivity or immobility caused by an illness or injury.
-  Walking and running, carried out in a planned and repetitive way, start up a series of physiological responses that, if organized in a planned way, undoubtedly lead to an organic strengthening of all devices that are involved and interrupt the process of slow degeneration caused by the lack of long-term physical activity.
+    <h1><a href="index.html">Health</a></h1>
+    <div id="grid">
+    <ol>
+      <li><a href="1.html"><u>Chest</u></a></li>
+      <li><a href="2.html"><u>Back</u></a></li>
+      <li><a href="3.html"><u>Shoulder</u></a></li>
+    </ol>
+    <div id="article">
+      <h2>Health Training</h2>
+      Movement is the most natural activity to keep body in its best efficiency or to regain the best conditions of functionality of the muscular and cardiovascular system after a period of inactivity or immobility caused by an illness or injury.
+      Walking and running, carried out in a planned and repetitive way, start up a series of physiological responses that, if organized in a planned way, undoubtedly lead to an organic strengthening of all devices that are involved and interrupt the process of slow degeneration caused by the lack of long-term physical activity.
+    </div>
+  </div>
   <img src="health.jpg" width="100%"><br>
 
   <!--Start of Tawk.to Script-->

@@ -14,7 +14,29 @@
       color:red;
     }
     h1 {
-      font-size: 45px; text-align: center
+      font-size: 45px; text-align: center;
+      border-bottom:1px solid gray;
+      margin:0;
+      padding:20px;
+    }
+    ol {
+      border-right:1px solid gray;
+      width:100px;
+      margin:0;
+      padding:15px;
+    }
+    #grid ol {
+      padding-left:33px;
+    }
+    body {
+      margin:0;
+    }
+    #grid {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+    }
+    #grid #article {
+      padding:20px;
     }
   </style>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -29,18 +51,21 @@
 </head>
 <body>
   <h1><a href="index.html">Health</a></h1>
-  <ol>
-    <li><a href="1.html" class="saw">Chest</a></li>
-    <li><a href="2.html" class="saw" id="active">Back</a></li>
-    <li><a href="3.html">Shoulder</a></li>
-  </ol>
-  <h2>Back</h2>
-  <p><strong>Dead Lift</strong><br>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/EBjYQeeBI-0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-  <p><strong>Lat Pull Down</strong><br>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/2K2WCGstHOY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-  <p><strong>Pull Up</strong><br>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/nWhS28U6bCY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
+  <div id="grid">
+    <ol>
+      <li><a href="1.html" class="saw">Chest</a></li>
+      <li><a href="2.html" class="saw" id="active"><u>Back</u></a></li>
+      <li><a href="3.html" class="saw">Shoulder</a></li>
+    </ol>
+    <div id="article">
+      <h2>Back</h2>
+      <p><strong>Dead Lift</strong><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EBjYQeeBI-0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+      <p><strong>Lat Pull Down</strong><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2K2WCGstHOY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+      <p><strong>Pull Up</strong><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nWhS28U6bCY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+    </div>
+  </div>
   </body>
 </html>
