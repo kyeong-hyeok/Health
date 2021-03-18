@@ -7,6 +7,31 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-974D01BN0Z"></script>
 <script>
+  function nightdayhandler(self) {
+  var target = document.querySelector('body');
+  if(self.value==='night') {
+      target.style.backgroundColor='black';
+      target.style.color='white';
+      self.value='day';
+      var i=0;
+      var alist = document.querySelectorAll('a');
+      while(i < alist.length) {
+        alist[i].style.color = 'powderblue';
+        i = i+1;
+      }
+    }
+    else {
+      target.style.backgroundColor='white';
+      target.style.color='black';
+      self.value='night';
+      var i=0;
+      var alist = document.querySelectorAll('a');
+      while(i < alist.length) {
+        alist[i].style.color = 'blue';
+        i = i+1;
+      }
+    }
+  }
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -17,29 +42,7 @@
 <body>
     <h1><a href="index.html">Health</a></h1>
     <input type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if(this.value==='night') {
-    target.style.backgroundColor='black';
-    target.style.color='white';
-    this.value='day';
-    var i=0;
-    var alist = document.querySelectorAll('a');
-    while(i < alist.length) {
-      alist[i].style.color = 'powderblue';
-      i = i+1;
-    }
-  }
-    else {
-    target.style.backgroundColor='white';
-    target.style.color='black';
-    this.value='night';
-    var i=0;
-    var alist = document.querySelectorAll('a');
-    while(i < alist.length) {
-      alist[i].style.color = 'blue';
-      i = i+1;
-    }
-  }
+    nightdayhandler(this);
   ">
     <div id="grid">
     <ol>
