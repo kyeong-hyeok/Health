@@ -13,34 +13,14 @@
 
   gtag('config', 'G-974D01BN0Z');
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">Health</a></h1>
   <input type="button" value="night" onclick="
-  var target = document.querySelector('body');
-  if(this.value==='night') {
-  target.style.backgroundColor='black';
-  target.style.color='white';
-  this.value='day';
-  var i=0;
-  var alist = document.querySelectorAll('a');
-  while(i < alist.length) {
-    alist[i].style.color = 'powderblue';
-    i = i+1;
-  }
-}
-  else {
-  target.style.backgroundColor='white';
-  target.style.color='black';
-  this.value='night';
-  var i=0;
-  var alist = document.querySelectorAll('a');
-  while(i < alist.length) {
-    alist[i].style.color = 'blue';
-    i = i+1;
-  }
-}
-">
+  nightdayhandler(this);
+  ">
   <div id="grid">
   <ol>
     <li><a href="1.html" class="saw">Chest</a></li>
@@ -49,6 +29,7 @@
   </ol>
   <div id="article">
   <h2>Shoulder</h2>
+
   <p><strong>Military Press</strong><br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/JyAhfMb3FIw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
   <p><strong>Side Lateral Raise</strong><br>
